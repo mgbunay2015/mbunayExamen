@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mbunayExamen.Views.AcercaDe"
+             Title="Acerca de">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label
+                Text="ACERCA DE"
+                FontSize="22"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Fill" />
+
+            <Image
+                Source="foto.jpeg"
+                HeightRequest="180"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Foto del estudiante" />
+
+            <Label x:Name="NombreLabel" />
+            <Label x:Name="CarreraLabel" />
+            <Label x:Name="ParaleloLabel" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

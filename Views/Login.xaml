@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mbunayExamen.Views.Login"
+             Title="Login">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+            <Label
+                Text="LOGIN"
+                TextColor="Purple"
+                FontSize="26"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Fill" />
+
+            <Image
+                Source="gimnasio.jpeg"
+                HeightRequest="160"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Logo del gimnasio" />
+                
+            <Grid
+                ColumnDefinitions="Auto,*"
+                RowDefinitions="Auto,Auto,Auto"
+                ColumnSpacing="10"
+                RowSpacing="10">
+                <Label
+                    Text="Usuario"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalOptions="Center" />
+                <Entry
+                    x:Name="UsuarioEntry"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Placeholder="Usuario" />
+
+                <Label
+                    Text="Contraseña"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    VerticalOptions="Center" />
+                <Entry
+                    x:Name="ClaveEntry"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Placeholder="Contraseña"
+                    IsPassword="True" />
+
+                <Button
+                    Text="Iniciar sesión"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Clicked="OnIniciarSesionClicked" />
+            </Grid>
+
+            <Button
+                Text="Acerca de"
+                Clicked="OnAcercaDeClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
